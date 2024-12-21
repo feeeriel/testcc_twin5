@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <form #f="ngForm" (ngSubmit)="addalbum(f)">
+        <div class="mb-3">
+            <label>Name </label>
+            <input class="form-control" name="t" ngModel="team.name" 
+            #name="ngModel" required minlength="3" pattern="[a-zA-Z]*">
+            <div class="alert alert-danger" *ngIf="name.invalid && (name.touched || name.dirty)">
+                <div *ngIf="name.errors!['required']">name is required</div>
+
+               
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Level </label>
+            <input class="form-control" level="t" ngModel="team.level" 
+            #level="ngModel" required minlength="3" pattern="[a-zA-Z]*">
+            <div class="alert alert-danger" *ngIf="level.invalid && (level.touched || level.dirty)">
+                <div *ngIf="level.errors!['required']">level is required</div>
+                <div *ngIf="level.errors!['pattern']">First must have only characters</div>
+               
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Project Name </label>
+            <input class="form-control" projectname="t" ngModel="team.projectname" 
+            #projectname="ngModel" required minlength="3" pattern="[a-zA-Z]*">
+            <div class="alert alert-danger" *ngIf="level.invalid && (projectname.touched || projectname.dirty)">
+                <div *ngIf="projectname.errors!['required']">projectname is required</div>
+                <div *ngIf="level.errors!['pattern']">First must have only characters</div>
+              
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label>projectdescription </label>
+            <input class="form-control" projectdescription="t" ngModel="team.projectdescription" 
+            #projectdescription="ngModel" required minlength="3" pattern="[a-zA-Z]*">
+            <div class="alert alert-danger" *ngIf="projectdescription.invalid && (projectdescription.touched || projectdescription.dirty)">
+                <div *ngIf="projectdescription.errors!['required']">Participants is required</div>
+                <div *ngIf="projectdescription.errors!['minlength']">Minimum 5 characters required</div>
+
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary" value="Ajouter"  [disabled]="f.invalid">
+            </div>
+        </form>
+
+    </div>
+</div>

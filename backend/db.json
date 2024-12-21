@@ -1,0 +1,24 @@
+{
+    "teamadd":[
+
+    ],
+    
+    "team": [
+        {
+          "id": 1,
+          "name":"aaa",
+          "projectName":"abc",
+          "level":"a"
+         
+         
+        },
+        {
+            "id": 2,
+            "name":"aaa",
+            "projectName":"abc",
+            "level":"a"
+           
+           
+          }
+    ]
+}
